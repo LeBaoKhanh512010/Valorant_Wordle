@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        ,<title>Home page</title>
+        <title>Home page</title>
+        <link rel = "stylesheet" href="{{ url_for('static', filename = 'stylecss')}}">
     </head>
     <body>
-        <h1>Home page</h1>
+        <section class = "part_1"> 
+            <h1 class = "index_page"> Hi my name is Khanh </h1> 
+            <img scr = "{{ url_for('static', filename = 'khanh.jpeg')}}" width = "30px" height="50px">
+            <div class = "container"> 
+                <h2>About me</h2>
+                <p class = "index_page"> I am male, 178 cm, 78kg, valorant player</p>
+                <h2>About the project</h2>
+                <p class = "index_page"> This is a Wordle game using Valorant knowledge, you will have to guess the word from the hint, the word will be a common term in Valorant. </p>
+            </div>
+            <a class = "button_link" href = "{{url_for('wordle_game')}}">Play game</a>
+        </section>
+        <section> 
+            <p class = "index_page">Footer</p>
+        </section>
     </body>
 </html>
